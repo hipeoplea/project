@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+          <div class="container">
+        <img src="static/img/logo.jpg">
+        <h1>Site</h1>
+        <nav>
+
+            <ul class="topmenu">
+              <li><a class="down">Меню</a>
+                <ul class="submenu">
+                  <li><a href="{{ url_for('index') }}">Главная</a></li>
+                  <li><a href="">Профиль</a></li>
+                  <li><a href="">Задачи</a></li>
+                  <li><a href="{{ url_for('logout') }}">Выход</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          </div>
+        </header>
+      {% block cont %}{% endblock %}
+      <footer>
+         <p>какой-то текст который всё равно никто не читает</p>
+        <pre>
+              /\_/\
+             ( o.o )
+              = ^ =
+            </pre>
+     </footer>
+{% endblock %}
